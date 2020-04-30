@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Device } from '@ionic-native/device/ngx';
+//import { Device } from '@ionic-native/device/ngx';
 
 @Component({
   selector: 'app-tab3',
@@ -8,16 +8,9 @@ import { Device } from '@ionic-native/device/ngx';
 })
 export class Tab3Page {
 
-  a = 'ko'
+  
 
-  constructor(public device: Device) {}
+  constructor() {}
 
-  ngOnInit() {
-    if(this.device.isVirtual) {
-      this.a = 'virtual'
-    } else {
-      this.a = 'ok'
-    }
-  }
 
 }

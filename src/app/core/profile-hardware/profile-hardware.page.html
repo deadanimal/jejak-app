@@ -1,0 +1,31 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hardware</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header-settings ion-justify-content-center">
+    <img [src]="iconHeader" class="mx-auto ion-align-self-center">
+  </div>
+  <ion-list class='settings-list'>
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-list-header lines="none">
+			<h4 class="ion-no-margin">Hardware information</h4>
+		</ion-list-header>
+    <ion-item class="form-profile" lines="none">
+      <ion-label position="stacked" mode="ios">Connected device</ion-label>
+      <ion-input placeholder="Connected device"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border" transparent>
+  <ion-button class="round" shape="round" color="tertiary" expand="block" (click)="connect()">
+    Connect
+  </ion-button>
+</ion-footer>

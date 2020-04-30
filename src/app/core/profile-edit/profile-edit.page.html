@@ -1,0 +1,80 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Edit</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="header-settings ion-justify-content-center">
+		<img *ngIf="formType != 'password'" [src]="iconHeader" class="mx-auto ion-align-self-center">
+		<img *ngIf="formType == 'password'" [src]="iconHeaderPassword" class="mx-auto ion-align-self-center">
+	</div>
+	<ion-list class='settings-list'>
+		<ion-item-divider mode="ios"></ion-item-divider>
+		<ion-list-header lines="none">
+			<h4 *ngIf="formType != 'password'" class="ion-no-margin">Edit information</h4>
+			<h4 *ngIf="formType == 'password'" class="ion-no-margin">Reset password</h4>
+		</ion-list-header>
+		<ion-item *ngIf="formType == 'name'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">Name</ion-label>
+			<ion-input placeholder="User's name"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'nric'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">NRIC</ion-label>
+			<ion-input placeholder="User's NRIC" mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'email'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">Email</ion-label>
+			<ion-input placeholder="User's email" mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'mobile'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">Mobile No.</ion-label>
+			<ion-input placeholder="User's mobile no." mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'address'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">Address</ion-label>
+			<ion-textarea placeholder="User's address" mode="ios"></ion-textarea>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'account'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">TNB Account No.</ion-label>
+			<ion-input placeholder="User's TNB account no." mode="ios"></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="formType == 'password'" class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios" class="ion-text-wrap">
+				<p>
+					Please click the button below to reset your password
+				</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-button 
+		class="round" 
+		shape="round" 
+		color="success"
+		expand="block" 
+		*ngIf="formType != 'password'"
+		(click)="save()"> 
+		Save
+	</ion-button>
+	<ion-button 
+		class="round" 
+		shape="round" 
+		color="tertiary"
+		expand="block" 
+		*ngIf="formType == 'password'"
+		(click)="resetPassword()"> 
+		Reset
+	</ion-button>
+</ion-footer>

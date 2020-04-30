@@ -1,0 +1,72 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-title>Profile</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header-settings ion-text-center">
+    <!--<img [src]="imgHeader" class="mx-auto ion-text-center">-->
+  </div>
+  <div>
+    <ion-avatar class="mx-auto avatar-profile">
+      <ion-img [src]="iconAvatar"></ion-img>
+    </ion-avatar>
+  </div>
+  <div class="ion-text-center">
+    <h3 class="ion-no-margin">Khairul Amin</h3>
+  </div>
+  <ion-list>
+    <!--<ion-item-divider mode="ios"></ion-item-divider>-->
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-item lines="none" detail (click)="navigatePage('profile-information')">
+      <ion-icon name="person-circle-outline" slot="end"></ion-icon>
+      <ion-label>Personal</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" detail (click)="navigatePage('profile-hardware')">
+      <ion-icon name="hardware-chip-outline" slot="end"></ion-icon>
+      <ion-label>Hardware</ion-label>
+    </ion-item>
+
+    <!--
+    <ion-item lines="none" detail (click)="navigatePage('profile-password')">
+      <ion-icon name="key-outline" slot="end"></ion-icon>
+      <ion-label>Password</ion-label>
+    </ion-item>
+    -->
+
+    <!--
+    <ion-item lines="none" detail (click)="navigatePage('profile-settings')">
+      <ion-icon name="cog-outline" slot="end"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-item>
+    -->
+    
+    <ion-item lines="none" detail (click)="navigatePage('profile-help')">
+      <ion-icon name="help-buoy-outline" slot="end"></ion-icon>
+      <ion-label>Help</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" detail (click)="navigatePage('profile-share')">
+      <ion-icon name="share-social-outline" slot="end"></ion-icon>
+      <ion-label>Share</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" detail (click)="navigatePage('profile-about')">
+      <ion-icon name="information-circle-outline" slot="end"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border" transparent>
+  <ion-button 
+    class="round" 
+    shape="round" 
+    color="danger" 
+    expand="block"
+    (click)="logout()"> 
+    Logout 
+  </ion-button>
+</ion-footer>

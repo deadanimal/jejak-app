@@ -1,0 +1,58 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Personal</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="header-settings ion-justify-content-center">
+		<img [src]="iconHeader" class="mx-auto ion-align-self-center">
+	</div>
+	<ion-list class='settings-list'>
+		<ion-item-divider mode="ios"></ion-item-divider>
+		<ion-list-header lines="none">
+			<h4 class="ion-no-margin">Information</h4>
+		</ion-list-header>
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'name')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>Name</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'nric')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>NRIC</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'email')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>Email</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'mobile')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>Mobile no.</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'address')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>Address</ion-label>
+		</ion-item>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'account')">
+			<ion-icon name="create-outline" slot="end"></ion-icon>
+			<ion-label>TNB account no.</ion-label>
+		</ion-item>
+
+		<ion-list-header lines="none">
+			<h4 class="ion-no-margin">Password</h4>
+		</ion-list-header>
+
+		<ion-item lines="none" detail (click)="editInformation('profile-edit', 'password')">
+			<ion-icon name="key-outline" slot="end"></ion-icon>
+			<ion-label>Password</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

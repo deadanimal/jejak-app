@@ -1,0 +1,68 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-title>Bill</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+	<div class="bill-header-wrapper ion-text-center">
+		<img class="bill-logo" [src]="iconBill">
+		<h1 class="ion-no-margin"><span class="heading-small">RM</span>{{paymentDue}}</h1>
+		<p class="ion-no-margin text-small">Due on {{dateDue}}</p>
+	</div>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<ion-button color="light" expand="block" (click)="navigatePage('bill-details')">View  details</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button color="success" expand="block" (click)="navigatePage('bill-payment')">Pay bill</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-list class="feed-list">
+		<ion-list-header lines="none">
+			<h4 class="ion-no-margin">History</h4>
+		</ion-list-header>
+
+		<ion-item detail lines="none" (click)="navigatePage('bill-details')">
+			<ion-label class="ion-text-wrap">
+				<ion-badge color="primary">April 2020</ion-badge>
+				<p>Bill payment</p>
+			</ion-label>
+			<ion-label slot="end" class="ion-text-wrap ion-text-right">
+				<h2>RM200.00</h2>
+				<p>06/04/2020</p>
+			</ion-label>
+		</ion-item>
+
+		<ion-item detail lines="none" (click)="navigatePage('bill-details')">
+			<ion-label class="ion-text-wrap">
+				<ion-badge color="primary">March 2020</ion-badge>
+				<p>Bill payment</p>
+			</ion-label>
+			<ion-label slot="end" class="ion-text-wrap ion-text-right">
+				<h2>RM180.00</h2>
+				<p>06/03/2020</p>
+			</ion-label>
+		</ion-item>
+
+		<ion-item detail lines="none" (click)="navigatePage('bill-details')">
+			<ion-label class="ion-text-wrap">
+				<ion-badge color="primary">February 2020</ion-badge>
+				<p>Bill payment</p>
+			</ion-label>
+			<ion-label slot="end" class="ion-text-wrap ion-text-right">
+				<h2>RM210.00</h2>
+				<p>06/02/2020</p>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>

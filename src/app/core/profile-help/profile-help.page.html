@@ -1,0 +1,40 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Help</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="header-settings ion-justify-content-center">
+		<img [src]="iconHeader" class="mx-auto ion-align-self-center">
+	</div>
+	<ion-list class='settings-list'>
+		<ion-item-divider mode="ios"></ion-item-divider>
+		<ion-list-header lines="none">
+			<h4 class="ion-no-margin">New ticket</h4>
+		</ion-list-header>
+		<ion-item lines="none" detail (click)="navigatePage('profile-help-create')">
+			<ion-icon name="reader-outline" slot="end"></ion-icon>
+			<ion-label>Create new ticket</ion-label>
+		</ion-item>
+
+		<ion-list-header lines="none">
+			<h4 class="ion-no-margin">Ticket history</h4>
+		</ion-list-header>
+		<ion-item lines="none" detail (click)="navigatePage('profile-help-ticket')">
+			<ion-avatar slot="start">
+				<img [src]="iconSpeech">
+			</ion-avatar>
+			<ion-label>
+				<ion-label class="ion-text-wrap">
+					<h2>19/03/2020 09:00 a.m</h2>
+					<p>Resolved</p>
+				</ion-label>
+			</ion-label>
+		</ion-item>
+
+	</ion-list>
+</ion-content>

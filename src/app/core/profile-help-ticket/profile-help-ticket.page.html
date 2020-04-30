@@ -1,0 +1,60 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Ticket</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="message-wrap">
+
+    <div *ngFor="let message of messages">
+
+      <div class="support" *ngIf="message.from == 'support' && message.to == 'client' ">
+
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2" class="ion-text-left">
+              <ion-avatar class="chat-avatar">
+                <img [src]="iconAvatar">
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="10">
+              <p>{{message.content}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div class="client" *ngIf="message.from == 'client' && message.to == 'support'">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="10">
+              <p>{{message.content}}</p>
+            </ion-col>
+            <ion-col size="2">
+              <ion-avatar class="chat-avatar">
+                <img [src]="iconAvatar">
+              </ion-avatar>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>
+
+<ion-footer class="ion-no-padding">
+  <ion-toolbar color="primary">
+    <ion-textarea (keyup.enter)="sendMessage()" [(ngModel)]="input" placeholder="Enter your message here" name="message"></ion-textarea>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="send-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

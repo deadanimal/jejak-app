@@ -1,0 +1,115 @@
+// Content
+ion-content {
+    --background: #F5F5F5;
+}
+
+// Footer
+ion-footer {
+    background: #F5F5F5;
+}
+
+ion-list.feed-list {
+    background: transparent;
+    ion-list-header {
+        --background: transparent !important;
+    }
+}
+
+// Button
+ion-button {
+    text-transform: none;
+}
+
+// List
+ion-list {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+ion-item-divider {
+    min-height: 1rem !important;
+    --background: #F5F5F5 !important;
+}
+
+// Media
+ion-thumbnail {
+    --border-radius: 0.5rem;
+}
+
+// Skeleton text
+ion-skeleton-text.intro-text {
+    width: 100%; 
+    height: 200px;
+}
+
+// Form
+ion-list > ion-item.form-core {
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    --background: transparent;
+    ion-label {
+        font-weight: 500 !important;
+    }
+    ion-input, ion-textarea {
+        // margin-top: 0.2rem;
+        border: 0.1rem solid #EDEDED;
+        border-radius: 15px;
+        --background: #F2F2F2;
+        --color: var(--ion-color-medium);
+        --placeholder-font-weight: 400;
+        --padding-start: 15px !important;
+        &:focus {
+            border: 0.1rem solid #27CC22 !important;
+            // border-radius: 0.3rem;
+            //--background: #FFFFFF !important;
+            // --padding-start: 0.5rem !important;
+        }
+    }
+    ion-button {
+        width: 100%;
+    }
+}
+
+/***************** Pages *****************/
+
+// Appliance
+
+ion-list.appliance-list {
+    // 
+}
+
+ion-list.settings-list {
+    ion-list-header {
+        --background: #F5F5F5 !important;
+    }
+}
+
+// Bill
+
+ion-list.bill-detail-list {
+    background: transparent;
+    ion-list-header {
+        --background: transparent !important;
+    }
+}
+ion-item.bill-payment-footer {
+    --background: transparent;
+}
+
+// Settings
+.header-settings {
+    height: 18vh;
+    background: #525be5;
+    display: flex;
+    img {
+        // padding: rem;
+        max-height: 95%;
+    }
+}
+
+ion-avatar.avatar-profile {
+    margin-top: -3.5rem;
+    width: 7rem;
+    height: 7rem;
+    border: 0.2rem solid #FFFFFF;
+}

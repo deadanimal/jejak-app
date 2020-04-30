@@ -1,0 +1,44 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Make a payment</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-item lines="none">
+			<ion-label position="stacked" mode="ios">
+        <h3>TNB Account No.</h3>
+        <p>12491241</p>
+      </ion-label>
+    </ion-item>
+    
+		<ion-item class="form-core" lines="none">
+			<ion-label position="stacked" mode="ios">I am paying (RM)</ion-label>
+			<ion-input placeholder="90.00" type="number"></ion-input>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+  <ion-item lines="none" class="bill-payment-footer">
+    <ion-label>
+      <h3 class="text-bolder">Total amount</h3>
+    </ion-label>
+    <ion-label slot="end" class="ion-text-right ion-text-wrap">
+      <h3 class="text-bolder"><span class="text-small">RM</span>200.00</h3>
+    </ion-label>
+  </ion-item>
+	<ion-button 
+    class="round" 
+    shape="round" 
+    color="success"
+    expand="block"
+    (click)="pay()">
+    Pay
+  </ion-button>
+</ion-footer>

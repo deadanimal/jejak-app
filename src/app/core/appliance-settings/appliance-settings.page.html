@@ -1,0 +1,83 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+    <ion-title>
+      Appliance Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="appliance-settings">
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-list-header lines="none">
+      <h3 class="ion-no-margin">Timeline</h3>
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Show on Timeline</h3>
+      </ion-label>
+      <ion-toggle slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-list-header>
+      <h3 class="ion-no-margin">Basic notifications</h3>
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Notify me when device is ON</h3>
+      </ion-label>
+      <ion-toggle slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Notify me when device is OFF</h3>
+      </ion-label>
+      <ion-toggle slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Notify me when device is IDLE</h3>
+      </ion-label>
+      <ion-toggle slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-list-header>
+      <h3 class="ion-no-margin">Custom notifications</h3>
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Add custom alert</h3>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="addCustomAlert">
+          <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-item detail lines="none" (click)="mergeDevice()">
+      <ion-label>
+        <h3>Merge device</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail lines="none" (click)="deleteDevice()">
+      <ion-label>
+        <h3>Delete device</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item detail lines="none" (click)="reportProblem()">
+      <ion-label>
+        <h3>Report a problem</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

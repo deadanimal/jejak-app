@@ -1,0 +1,23 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Ticket</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+</ion-content>
+
+<ion-footer class="ion-no-padding">
+  <ion-toolbar color="primary">
+    <ion-textarea (keyup.enter)="sendMessage()" [(ngModel)]="input" placeholder="Enter your message here" name="message"></ion-textarea>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="send-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

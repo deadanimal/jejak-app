@@ -1,0 +1,15 @@
+ion-content.background{
+    --background: url('src/assets/img/background/wave.svg') 100% 300%/100% 100vh no-repeat;
+    background-color: #F5F5F5;
+}
+
+.bill-header-wrapper {
+    margin-top: 5.3rem;
+    .bill-logo {
+        max-height: 5rem;
+    }
+}
+
+.heading-small {
+    font-size: 1rem;
+}

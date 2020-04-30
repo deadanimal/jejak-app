@@ -1,0 +1,37 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Appliances</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-item detail *ngFor="let appliance of appliances" lines="none" (click)="viewDetails()">
+      <ion-avatar slot="start">
+        <img *ngIf="appliance.appliance == 'TV'" [src]="iconLCD">
+        <img *ngIf="appliance.appliance == 'Lamp'" [src]="iconLamp">
+        <img *ngIf="appliance.appliance == 'Light'" [src]="iconLamp1">
+        <img *ngIf="appliance.appliance == 'Fridge'" [src]="iconFridge">
+        <img *ngIf="appliance.appliance == 'Airconditioner'" [src]="iconAirCond">
+        <img *ngIf="appliance.appliance == 'Dishwasher'" [src]="iconDishwasher">
+        <img *ngIf="appliance.appliance == 'Toaster'" [src]="iconToaster">
+        <img *ngIf="appliance.appliance == 'Dryer'" [src]="iconDryer">
+      </ion-avatar>
+      
+      <ion-label class="ion-text-wrap">
+        <h2>{{appliance.appliance}}</h2>
+        <p>{{appliance.description}}</p>
+      </ion-label>
+
+      <ion-label slot="end" class="ion-text-right">
+        <ion-badge *ngIf="appliance.status == 'On'" color="success">On</ion-badge>
+        <ion-badge *ngIf="appliance.status == 'Off'" color="medium">Off</ion-badge>
+        <p>{{appliance.reading}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

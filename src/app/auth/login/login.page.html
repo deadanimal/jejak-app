@@ -1,0 +1,54 @@
+<ion-content class="ion-padding">
+  <ion-grid style="height: 100%">
+    <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%; flex-direction: column">
+      <ion-col>
+        <img src="../assets/icon/icon.png">
+        <form class="form" [formGroup]="validations_form" (ngSubmit)="login()">
+
+          <!--<p style="text-align: center;">Use <strong>demo@demo.com</strong><br> and <strong>demodemo</strong> as demo user<span style="color: var(--ion-color-secondary);">(read)</span><br>
+           or register another<span style="color: var(--ion-color-secondary);">(read/write)</span></p>-->
+          <p class="ion-text-center ion-padding-bottom">Please enter your login credentials</p>
+
+          <ion-item lines="none">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="text" formControlName="username" placeholder="Your Email"></ion-input>
+          </ion-item>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.username">
+              <div class="error-message"
+                *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-item lines="none">
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <div class="validation-errors ion-text-right">
+            <p><a (click)="navigateForgotPage()">Forgot Password </a></p>
+          </div>
+          <div class="ion-text-center">
+            <ion-button
+              *ngIf="!isLoading"
+              type="submit" 
+              [disabled]="!validations_form.valid" 
+              shape="round" 
+              color="primary">
+              Login
+            </ion-button>
+            <ion-button
+              disabled
+              *ngIf="isLoading"
+              type="submit" 
+              shape="round" 
+              color="primary">
+              <ion-spinner name="bubbles"></ion-spinner>
+            </ion-button>
+            <!--<p>No account yet? <a (click)="navigateRegisterPage()">Create an account.</a> </p>-->
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

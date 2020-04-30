@@ -14,6 +14,8 @@ import BackgroundGeolocation, {
   HeartbeatEvent,
   ConnectivityChangeEvent
 } from "cordova-background-geolocation-lt";
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-tab2',
@@ -56,6 +58,8 @@ export class Tab2Page {
       console.log('[providerchange] - ', event.enabled, event.status, event.gps);
     });
 
+    let url: string = environment.baseUrl + 'v1/positions/feed/';
+
     // 2.  Configure the plugin with #ready
     BackgroundGeolocation.ready({
       reset: true,
@@ -63,7 +67,7 @@ export class Tab2Page {
       logLevel: BackgroundGeolocation.LOG_LEVEL_VERBOSE,
       desiredAccuracy: BackgroundGeolocation.DESIRED_ACCURACY_HIGH,
       distanceFilter: 10,
-      url: 'https://webhook.site/0f9419ad-211b-4cf1-aba9-dda15c44cb53',
+      url: url,
       autoSync: true,
       stopOnTerminate: false,
       startOnBoot: true

@@ -1,0 +1,32 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Share</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header-settings ion-justify-content-center">
+    <img [src]="iconHeader" class="mx-auto ion-align-self-center">
+  </div>
+  <ion-list class='settings-list'>
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-list-header lines="none">
+			<h4 class="ion-no-margin">Share application</h4>
+		</ion-list-header>
+
+    <ion-item detail lines="none" (click)="rate()">
+      <ion-icon name="star-outline" slot="end"></ion-icon>
+      <ion-label>Rate this app</ion-label>
+    </ion-item>
+
+    <!--
+    <ion-item detail lines="none" (click)="share()">
+      <ion-icon name="share-outline" slot="end"></ion-icon>
+      <ion-label>Share this app</ion-label>
+    </ion-item> 
+    -->
+  </ion-list>
+</ion-content>

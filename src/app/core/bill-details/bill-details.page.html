@@ -1,0 +1,68 @@
+<ion-header mode="ios">
+	<ion-toolbar mode="ios">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>Bill Details</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="bill-detail-list">
+    <ion-item-divider mode="ios"></ion-item-divider>
+    <ion-list-header>
+      <h3 class="ion-no-margin">Bill statement</h3>
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Date</h3>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        05/04/2020
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Account no.</h3>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        10812310241
+      </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h3>Amount due</h3>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-wrap ion-text-right">
+        <h3><span class="text-small">RM</span>200.00</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-padding ion-no-border">
+	<ion-grid>
+		<ion-row>
+      <ion-col class="ion-text-center">
+				<ion-button 
+					class="round" 
+					shape="round" 
+					color="light" 
+					(click)="view()">
+					View bill
+				</ion-button>
+			</ion-col>
+			<ion-col class="ion-text-center">
+				<ion-button 
+					class="round" 
+					shape="round" 
+					color="success" 
+					(click)="navigatePage('bill-payment')">
+					Pay
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-footer>
